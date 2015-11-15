@@ -1,4 +1,8 @@
-
+<?php
+  $pageName = 'Home';
+  $siteName = 'iDeus';
+  $uri = 'home';
+?>
 
 <!doctype html>
 <html class="-device_<?php echo $device; ?> no-js" lang="">
@@ -60,7 +64,7 @@
           <a class="b-siteInfo__link"<?php if(!$isHomepage): ?> href="index.html"<?php endif; ?>>
             <img class="b-siteInfo__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/siteInfo__logo.png" alt="<?php echo $siteName; ?>" />
           </a>
-          <?php if($isHomepage): ?>
+          <?php if(!$isHomepage): ?>
             <h1 class="b-siteInfo__title"><?php echo $siteName; ?></h1>
             <div class="b-siteInfo__descr">Веб-разработка, дизайн, юзабилити, мобильные приложения</div>
           <?php endif; ?>
