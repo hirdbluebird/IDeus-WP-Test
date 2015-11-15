@@ -2,7 +2,7 @@
   <div class="b-about">
     <h2 class="b-about__title">О нас</h2>
 
-    <img class="b-about__thumb" src="assets/img/userfiles/about-ill.jpg" alt="О нас" />
+    <img class="b-about__thumb" src="<?php echo get_template_directory_uri(); ?>/assets/img/userfiles/about-ill.jpg" alt="О нас" />
     <div class="b-about__content b-text">
       <p>Веб-сайты, мобильные приложения, корпоративные интернет решения — всем этим наша компания занимается уже более 12 лет, предлагая услуги по консультации, разработке, внедрению и сопровождению различных проектов для наших клиентов.</p>
     </div>
@@ -15,7 +15,7 @@
       <ul class="b-lastNews">
         <li class="b-lastNews__item">
           <a class="b-lastNews__thumbLink" href="#">
-            <img class="b-lastNews__thumb" src="assets/img/userfiles/lastNews_1-ill.jpg" alt="ideus_team at WebCampOdessa" />
+            <img class="b-lastNews__thumb" src="<?php echo get_template_directory_uri(); ?>/assets/img/userfiles/lastNews_1-ill.jpg" alt="ideus_team at WebCampOdessa" />
           </a>
 
           <div class="b-lastNews__content">
@@ -31,7 +31,7 @@
 
         <li class="b-lastNews__item">
           <a class="b-lastNews__thumbLink" href="#">
-            <img class="b-lastNews__thumb" src="assets/img/userfiles/lastNews_2-ill.png" alt="Запуск интерактивной библиотеки для детей под iOS «Візок казок»" />
+            <img class="b-lastNews__thumb" src="<?php echo get_template_directory_uri(); ?>/assets/img/userfiles/lastNews_2-ill.png" alt="Запуск интерактивной библиотеки для детей под iOS «Візок казок»" />
           </a>
 
           <div class="b-lastNews__content">

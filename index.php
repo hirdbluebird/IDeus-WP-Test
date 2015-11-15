@@ -66,7 +66,7 @@
       <div class="b-share">
         <div class="b-share__title">Поделиться:</div>
         <div class="b-share__content">
-          <img src="assets/img/temp-share.png" alt="" />
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/temp-share.png" alt="" />
         </div>
       </div>
     </div>
