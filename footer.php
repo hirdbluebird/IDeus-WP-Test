@@ -9,7 +9,7 @@
     </footer>
   </div><!--wrapper-->
 
-  <script src="assets/js/scripts.js?<?php echo filemtime('assets/js/scripts.js'); ?>"></script>
+  <script src="<?php echo get_template_directory_iru(); ?>/assets/js/scripts.js?<?php echo filemtime('assets/js/scripts.js'); ?>"></script>
   <!--<script src="assets/js/scripts-extra.js?<?php echo filemtime('assets/js/scripts-extra.js'); ?>"></script>-->
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

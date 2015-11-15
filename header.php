@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,400italic|Roboto+Slab&subset=latin,cyrillic" />
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script>window.Modernizr || document.write('<script src="assets/js/vendor/modernizr-2.8.3.min.js"><\/script>')</script>
+  <script>window.Modernizr || document.write('<script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/modernizr-2.8.3.min.js"><\/script>')</script>
 
   <!--[if lte IE 8]>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -51,14 +51,14 @@
         <div class="l-siteLogo">
           <div class="b-siteLogo" itemscope itemtype="http://schema.org/Organization">
             <a class="b-siteLogo__link" href="http://ideus.biz" itemprop="url">
-              <img class="b-siteLogo__icon" src="assets/img/siteLogo__icon.png" alt="iDeus" title="iDeus" itemprop="logo" />
+              <img class="b-siteLogo__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/siteLogo__icon.png" alt="iDeus" title="iDeus" itemprop="logo" />
             </a>
           </div>
         </div>
 
         <div class="b-siteInfo">
           <a class="b-siteInfo__link"<?php if(!$isHomepage): ?> href="index.html"<?php endif; ?>>
-            <img class="b-siteInfo__logo" src="assets/img/siteInfo__logo.png" alt="<?php echo $siteName; ?>" />
+            <img class="b-siteInfo__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/siteInfo__logo.png" alt="<?php echo $siteName; ?>" />
           </a>
           <?php if($isHomepage): ?>
             <h1 class="b-siteInfo__title"><?php echo $siteName; ?></h1>
