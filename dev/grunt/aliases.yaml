@@ -1,0 +1,54 @@
+default:
+  description: 'Default (production) build'
+  tasks:
+    - prod
+
+prod:
+  description: 'Production build'
+  tasks:
+    - clean
+    - preprocess
+    - postprocess
+    - merge
+
+
+preprocess:
+  description: 'All Preprocess tasks'
+  tasks:
+    - 'sass'
+    - 'jshint'
+
+postprocess:
+  description: 'All Postprocess tasks'
+  tasks:
+    - 'csslint'
+    - 'postcss'
+    - 'imagemin'
+
+merge:
+  description: 'All Merge tasks'
+  tasks:
+    - 'concat'
+    - 'uglify'
+
+
+
+
+css:
+  description: 'CSS Tasks'
+  tasks:
+    - 'sass'
+    - 'csslint'
+    - 'postcss'
+
+js:
+  description: 'JS Tasks'
+  tasks:
+    - 'jshint'
+    - 'concat'
+    - 'uglify'
+
+img:
+  description: 'Image tasks'
+  tasks:
+    - 'imagemin'
