@@ -1,43 +1,12 @@
-<?php
-  if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off') {
-      $protocol = 'http://';
-  } else {
-      $protocol = 'https://';
-  }
-  $BASE_URL = $protocol . $_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']);
 
-  require_once 'inc/vendor/Mobile_Detect.php';
-  $detect = new Mobile_Detect();
 
-  $device = (!$detect->isMobile()) ? 'desktop' : ($detect->isTablet() ? 'tablet' : 'mobile');
-
-  $device = (isset($_COOKIE['device']) && $_COOKIE['device']) ? $_COOKIE['device'] : $device;
-
-  switch ($device) {
-    case 'mobile':
-      $viewport     = '640px';
-      $viewportMeta = '640';
-      break;
-    case 'tablet':
-      $viewport     = '1200px';
-      $viewportMeta = '1200';
-      break;
-    case 'desktop':
-    default:
-      $viewport     = 'device-width';
-      $viewportMeta = 'device-width';
-      break;
-  }
-  $isHomepage = (basename($_SERVER['PHP_SELF']) == 'index.php');
-  $title = ($isHomepage) ? $siteName : $pageName.' : '.$siteName;
-?>
 <!doctype html>
 <html class="-device_<?php echo $device; ?> no-js" lang="">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title><?php echo $title; ?></title>
+  <title><?php wp_title(); ?></title>
   <meta name="description" content="" />
 
   <!-- <meta property="og:image" content="<?php echo $BASE_URL; ?>/img/userfiles/og-image.png" /> -->
@@ -52,10 +21,10 @@
     }
   </style>
 
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
+  <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>apple-touch-icon.png" />
 
-  <link rel="stylesheet" href="assets/css/main.min.css?<?php echo filemtime('assets/css/main.min.css'); ?>" />
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.min.css<?php echo filemtime('assets/css/main.min.css'); ?>" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,400italic|Roboto+Slab&subset=latin,cyrillic" />
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
