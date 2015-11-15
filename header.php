@@ -28,9 +28,6 @@
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
   <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>apple-touch-icon.png" />
 
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.min.css<?php echo filemtime('assets/css/main.min.css'); ?>" />
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,400italic|Roboto+Slab&subset=latin,cyrillic" />
-
   <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script>window.Modernizr || document.write('<script src="<?php echo get_template_directory_uri(); ?>/assets/js/vendor/modernizr-2.8.3.min.js"><\/script>')</script>
 
