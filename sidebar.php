@@ -19,14 +19,13 @@
                   foreach ( $recent_posts as $recent ) {
           ?>
 
-              <?php $post_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $recent ) );
-              echo var_dump($post_image_url);
-              echo $post_image_url;
-              ?>
+              <?php $post_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $recent["ID"] ), 'sidebar-post-thumbnail' );  ?>
+
+
 
               <li class="b-lastNews__item">
                 <a class="b-lastNews__thumbLink" href="#">
-                  <img class="b-lastNews__thumb" src="<?php echo $post_image_url ?>" alt="ideus_team at WebCampOdessa" />
+                  <img class="b-lastNews__thumb" src="<?php echo $post_image_url[0] ?>" alt="ideus_team at WebCampOdessa" width="<?php echo $post_image_url[1]; ?>" height="<?php echo $post_image_url[2]; ?>" />
                 </a>
 
                 <div class="b-lastNews__content">
