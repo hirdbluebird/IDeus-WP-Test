@@ -105,25 +105,19 @@
             </li>
           </ul>
 
-          <nav class="l-siteNavigation" role="navigation">
-            <ul class="b-mainNavigation">
-              <li class="b-mainNavigation__item">
-                <a class="b-mainNavigation__link" href="category.html">Events</a>
-              </li>
-              <li class="b-mainNavigation__item">
-                <a class="b-mainNavigation__link" href="category.html">Work</a>
-              </li>
-              <li class="b-mainNavigation__item">
-                <a class="b-mainNavigation__link" href="category.html">Порка</a>
-              </li>
-              <li class="b-mainNavigation__item">
-                <a class="b-mainNavigation__link" href="category.html">Праздники</a>
-              </li>
-              <li class="b-mainNavigation__item">
-                <a class="b-mainNavigation__link" href="category.html">Статьи</a>
-              </li>
-            </ul>
-          </nav>
+          <?php
+
+            $args = array(
+
+              'container' => 'nav',
+              'container_class' => 'l-siteNavigation', 
+              'menu_class' => 'b-mainNavigation'
+            );
+
+            wp_nav_menu( $args );
+            
+          ?>
+          
         </div>
       </div>
     </header>
