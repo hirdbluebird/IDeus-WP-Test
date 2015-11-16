@@ -110,8 +110,9 @@
             $args = array(
 
               'container' => 'nav',
-              'container_class' => 'l-siteNavigation', 
-              'menu_class' => 'b-mainNavigation'
+              'container_class' => '', 
+              'menu_class' => '',
+              
             );
 
             wp_nav_menu( $args );
