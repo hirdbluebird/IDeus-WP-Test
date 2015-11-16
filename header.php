@@ -95,13 +95,13 @@
 
           <ul class="b-socialMenu -style_header">
             <li class="b-socialMenu__item -type_fb">
-              <a href="https://www.facebook.com/ideus.interactive" class="b-socialMenu__link">Facebook</a>
+              <a href="<?php if ( get_field('facebook-link', get_the_ID()) != '') { the_field('facebook-link', get_the_ID()); } ?>" class="b-socialMenu__link">Facebook</a>
             </li>
             <li class="b-socialMenu__item -type_twitter">
-              <a href="https://twitter.com/iDeus_team" class="b-socialMenu__link">Twitter</a>
+              <a href="<?php if ( get_field('twitter-link', get_the_ID()) !='') { the_field('twitter-link', get_the_ID()); } ?>" class="b-socialMenu__link">Twitter</a>
             </li>
             <li class="b-socialMenu__item -type_github">
-              <a href="https://github.com/ideus-team" class="b-socialMenu__link">GitHub</a>
+              <a href="<?php if ( get_field('github-link', get_the_ID()) !='') { the_field('github-link', get_the_ID()); } ?>" class="b-socialMenu__link">GitHub</a>
             </li>
           </ul>
 
