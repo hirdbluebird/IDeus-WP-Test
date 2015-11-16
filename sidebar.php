@@ -8,12 +8,20 @@
       <p><?php the_field('about-text'); ?></p>
     </div>
   </div>
-        
+  
+
   <div class="b-sidebarBlock -style_news">
     <h2 class="b-sidebarBlock__title">Последние новости</h2>
+      <div class="l-lastNews">
+        <ul class="b-lastNews">
+          <?php $args = array( 'numberposts' => '2' );  
+                $recent_posts = wp_get_recent_posts( $args );
+                    foreach ( $recent_posts as $recent) {
+          ?>
 
-    <div class="l-lastNews">
-      <ul class="b-lastNews">
+  
+
+    
         <li class="b-lastNews__item">
           <a class="b-lastNews__thumbLink" href="#">
             <img class="b-lastNews__thumb" src="<?php echo get_template_directory_uri(); ?>/assets/img/userfiles/lastNews_1-ill.jpg" alt="ideus_team at WebCampOdessa" />
@@ -21,7 +29,7 @@
 
           <div class="b-lastNews__content">
             <h3 class="b-lastNews__name">
-              <a class="b-lastNews__nameLink" href="#">Конференция #WebCamp 2015 в Одессе</a>
+              <a class="b-lastNews__nameLink" href="#"><?php echo $recent["post-title"] ?></a>
             </h3>
             <div class="b-lastNews__date">8 июля 2015</div>
             <div class="b-lastNews__descr b-text">
@@ -30,21 +38,7 @@
           </div>
         </li>
 
-        <li class="b-lastNews__item">
-          <a class="b-lastNews__thumbLink" href="#">
-            <img class="b-lastNews__thumb" src="<?php echo get_template_directory_uri(); ?>/assets/img/userfiles/lastNews_2-ill.png" alt="Запуск интерактивной библиотеки для детей под iOS «Візок казок»" />
-          </a>
-
-          <div class="b-lastNews__content">
-            <h3 class="b-lastNews__name">
-              <a class="b-lastNews__nameLink" href="#">Запуск интерактивной библиотеки для детей под iOS «Візок казок»</a>
-            </h3>
-            <div class="b-lastNews__date">19 июня 2015</div>
-            <div class="b-lastNews__descr b-text">
-              <p>Друзья! Мы спешим сообщить вам, что в…</p>
-            </div>
-          </div>
-        </li>
+        <?php }; ?>
       </ul>
     </div>
   </div>
