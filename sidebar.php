@@ -1,10 +1,11 @@
 <aside class="l-sidebar">
   <div class="b-about">
-    <h2 class="b-about__title">О нас</h2>
+    <h2 class="b-about__title"><?php the_field('about-title'); ?></h2>
 
-    <img class="b-about__thumb" src="<?php echo get_template_directory_uri(); ?>/assets/img/userfiles/about-ill.jpg" alt="О нас" />
+
+    <img class="b-about__thumb" src="<?php echo get_field('about-image'); ?>" alt="О нас" />
     <div class="b-about__content b-text">
-      <p>Веб-сайты, мобильные приложения, корпоративные интернет решения — всем этим наша компания занимается уже более 12 лет, предлагая услуги по консультации, разработке, внедрению и сопровождению различных проектов для наших клиентов.</p>
+      <p><?php the_field('about-text'); ?></p>
     </div>
   </div>
         

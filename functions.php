@@ -43,5 +43,4 @@ class description_walker extends Walker_Nav_Menu
             }
 }
 
-
 ?>
