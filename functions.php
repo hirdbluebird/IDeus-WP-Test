@@ -43,4 +43,12 @@ class description_walker extends Walker_Nav_Menu
             }
 }
 
+/**
+ * Enables the Excerpt meta box in Page edit screen.
+ */
+function wpcodex_add_excerpt_support_for_pages() {
+ add_post_type_support( 'page', 'excerpt' );
+}
+add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
+
 ?>

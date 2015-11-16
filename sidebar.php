@@ -16,7 +16,7 @@
         <ul class="b-lastNews">
           <?php $args = array( 'numberposts' => '2' );  
                 $recent_posts = wp_get_recent_posts( $args );
-                    foreach ( $recent_posts as $recent) {
+                    foreach ( $recent_posts as $recent ) {
           ?>
 
   
@@ -29,11 +29,11 @@
 
           <div class="b-lastNews__content">
             <h3 class="b-lastNews__name">
-              <a class="b-lastNews__nameLink" href="#"><?php echo $recent["post-title"] ?></a>
+              <a class="b-lastNews__nameLink" href="#"><?php echo $recent["post_title"]; ?></a>
             </h3>
-            <div class="b-lastNews__date">8 июля 2015</div>
+            <div class="b-lastNews__date"><?php echo $recent["post_date"]; ?></div>
             <div class="b-lastNews__descr b-text">
-              <p>3-5 июля мы побывали на конференции WebCamp…</p>
+              <p><?php echo $recent["post_excerpt"]; ?></p>
             </div>
           </div>
         </li>
