@@ -21,8 +21,6 @@
 
               <?php $post_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $recent["ID"] ), 'sidebar-post-thumbnail' );  ?>
 
-
-
               <li class="b-lastNews__item">
                 <a class="b-lastNews__thumbLink" href="#">
                   <img class="b-lastNews__thumb" src="<?php echo $post_image_url[0] ?>" alt="ideus_team at WebCampOdessa" width="<?php echo $post_image_url[1]; ?>" height="<?php echo $post_image_url[2]; ?>" />
