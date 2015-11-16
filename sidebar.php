@@ -16,29 +16,31 @@
         <ul class="b-lastNews">
           <?php $args = array( 'numberposts' => '2' );  
                 $recent_posts = wp_get_recent_posts( $args );
-                    foreach ( $recent_posts as $recent ) {
+                  foreach ( $recent_posts as $recent ) {
           ?>
 
-  
+              <?php $post_image_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
+              echo var_dump($post_image_url);
+              ?>
 
-    
-        <li class="b-lastNews__item">
-          <a class="b-lastNews__thumbLink" href="#">
-            <img class="b-lastNews__thumb" src="<?php echo get_template_directory_uri(); ?>/assets/img/userfiles/lastNews_1-ill.jpg" alt="ideus_team at WebCampOdessa" />
-          </a>
+              <li class="b-lastNews__item">
+                <a class="b-lastNews__thumbLink" href="#">
+                  <img class="b-lastNews__thumb" src="<?php echo $post_image_url ?>" alt="ideus_team at WebCampOdessa" />
+                </a>
 
-          <div class="b-lastNews__content">
-            <h3 class="b-lastNews__name">
-              <a class="b-lastNews__nameLink" href="#"><?php echo $recent["post_title"]; ?></a>
-            </h3>
-            <div class="b-lastNews__date"><?php echo $recent["post_date"]; ?></div>
-            <div class="b-lastNews__descr b-text">
-              <p><?php echo $recent["post_excerpt"]; ?></p>
-            </div>
-          </div>
-        </li>
+                <div class="b-lastNews__content">
+                  <h3 class="b-lastNews__name">
+                    <a class="b-lastNews__nameLink" href="#"><?php echo $recent["post_title"]; ?></a>
+                  </h3>
+                  <div class="b-lastNews__date"><?php echo $recent["post_date"]; ?></div>
+                  <div class="b-lastNews__descr b-text">
+                    <p><?php echo $recent["post_excerpt"]; ?></p>
+                  </div>
+                </div>
+              </li>
 
-        <?php }; ?>
+          <?php }; ?>
+
       </ul>
     </div>
   </div>
