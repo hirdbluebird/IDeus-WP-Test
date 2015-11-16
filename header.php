@@ -65,8 +65,8 @@
             <img class="b-siteInfo__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/siteInfo__logo.png" alt="<?php echo $siteName; ?>" />
           </a>
           <?php if(!$isHomepage): ?>
-            <h1 class="b-siteInfo__title"><?php if ( get_field('site-title', get_the_ID()) != '') { the_field('site-title', get_the_ID() ); } ?></h1>
-            <div class="b-siteInfo__descr">Веб-разработка, дизайн, юзабилити, мобильные приложения</div>
+            <h1 class="b-siteInfo__title"><?php if ( get_field('site-title', get_the_ID()) != '') { the_field('site-title', get_the_ID()); } ?></h1>
+            <div class="b-siteInfo__descr"><?php if ( get_field('site-sub-title', get_the_ID()) != '' ) { the_field('site-sub-title', get_the_ID()); } ?></div>
           <?php endif; ?>
         </div>
 
