@@ -19,8 +19,9 @@
                   foreach ( $recent_posts as $recent ) {
           ?>
 
-              <?php $post_image_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
+              <?php $post_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $recent ) );
               echo var_dump($post_image_url);
+              echo $post_image_url;
               ?>
 
               <li class="b-lastNews__item">
