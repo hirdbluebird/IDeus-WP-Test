@@ -48,13 +48,13 @@
 
     <ul class="b-socialMenu -style_sidebar">
       <li class="b-socialMenu__item -type_fb">
-        <a class="b-socialMenu__link" href="https://www.facebook.com/ideus.interactive">Facebook</a>
+        <a class="b-socialMenu__link" href="<?php if ( get_field('facebook-link', get_the_ID()) != '') { the_field('facebook-link', get_the_ID()); } ?>">Facebook</a>
       </li>
       <li class="b-socialMenu__item -type_twitter">
-        <a class="b-socialMenu__link" href="https://twitter.com/iDeus_team">Twitter</a>
+        <a class="b-socialMenu__link" href="<?php if ( get_field('twitter-link', get_the_ID()) != '') { the_field('twitter-link', get_the_ID()); } ?>">Twitter</a>
       </li>
       <li class="b-socialMenu__item -type_github">
-        <a class="b-socialMenu__link" href="https://github.com/ideus-team">GitHub</a>
+        <a class="b-socialMenu__link" href="<?php if ( get_field('github-link', get_the_ID()) != '') { the_field('github-link', get_the_ID()); } ?>">GitHub</a>
       </li>
     </ul>
   </div>
