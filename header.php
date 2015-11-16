@@ -108,11 +108,10 @@
           <?php
 
             $args = array(
-
               'container' => 'nav',
-              'container_class' => '', 
-              'menu_class' => '',
-              
+              'container_class' => 'l-siteNavigation', 
+              'menu_class' => 'b-mainNavigation',
+              'walker' => new description_walker
             );
 
             wp_nav_menu( $args );

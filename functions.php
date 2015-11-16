@@ -13,7 +13,7 @@ class description_walker extends Walker_Nav_Menu
            $classes = empty( $item->classes ) ? array() : (array) $item->classes;
 
            $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
-           $class_names = ' class="'. esc_attr( $class_names ) . '"';
+           $class_names = ' class="b-mainNavigation__item"';
 
            $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
 
@@ -21,6 +21,7 @@ class description_walker extends Walker_Nav_Menu
            $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
            $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
            $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+           $attributes .= ! empty( $item->class )      ? ' class="b-mainNavigation__link" ' : '';
 
            $prepend = '<strong>';
            $append = '</strong>';
