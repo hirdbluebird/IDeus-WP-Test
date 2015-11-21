@@ -55,6 +55,7 @@ add_action( 'init', 'wpcodex_add_excerpt_support_for_pages' );
 add_theme_support('post-thumbnails');
 if ( function_exists( 'add_image_size' ) ) {
    add_image_size('sidebar-post-thumbnail', 123, 86);
+   add_image_size('post-page-thumbnail', 770, 425);
 };
 
  
