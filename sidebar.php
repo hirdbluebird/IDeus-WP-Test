@@ -20,6 +20,7 @@
                            'orderby' => 'rand' 
             );  
             $recent_posts = wp_get_recent_posts( $args );
+            
             foreach ( $recent_posts as $recent ) {
           ?>
 
@@ -27,7 +28,7 @@
 
               <li class="b-lastNews__item">
                 <a class="b-lastNews__thumbLink" href="#">
-                  <img class="b-lastNews__thumb" src="<?php echo $post_image_url[0] ?>" alt="ideus_team at WebCampOdessa" width="<?php echo $post_image_url[1]; ?>" height="<?php echo $post_image_url[2]; ?>" />
+                  <img class="b-lastNews__thumb" src="<?php echo $post_image_url[0]; ?>" alt="ideus_team at WebCampOdessa" width="<?php echo $post_image_url[1]; ?>" height="<?php echo $post_image_url[2]; ?>" />
                 </a>
 
                 <div class="b-lastNews__content">
