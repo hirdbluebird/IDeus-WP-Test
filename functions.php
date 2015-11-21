@@ -57,4 +57,6 @@ if ( function_exists( 'add_image_size' ) ) {
    add_image_size('sidebar-post-thumbnail', 123, 86);
 };
 
+ 
+
 ?>

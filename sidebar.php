@@ -14,9 +14,12 @@
     <h2 class="b-sidebarBlock__title">Последние новости</h2>
       <div class="l-lastNews">
         <ul class="b-lastNews">
-          <?php $args = array( 'numberposts' => '2' );  
-                $recent_posts = wp_get_recent_posts( $args );
-                  foreach ( $recent_posts as $recent ) {
+          <?php 
+            $args = array( 'numberposts' => '2',
+                           'category_name'    => 'Advertising' 
+            );  
+            $recent_posts = wp_get_recent_posts( $args );
+            foreach ( $recent_posts as $recent ) {
           ?>
 
               <?php $post_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $recent["ID"] ), 'sidebar-post-thumbnail' );  ?>
