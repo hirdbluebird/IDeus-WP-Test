@@ -16,7 +16,8 @@
         <ul class="b-lastNews">
           <?php 
             $args = array( 'numberposts' => '2',
-                           'category_name'    => 'Advertising' 
+                           'category_name'    => 'Advertising',
+                           'orderby' => 'rand' 
             );  
             $recent_posts = wp_get_recent_posts( $args );
             foreach ( $recent_posts as $recent ) {
